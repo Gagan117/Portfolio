@@ -5,22 +5,157 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gaganvir Bhullar Portfolio</title>
   <style>
+    /* Global styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      margin: 0;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
       min-height: 100vh;
-      margin: 0;
-      background-color: #f5f5f5;
+      color: #333;
     }
-    h1 { color: #333; }
-    p { color: #555; font-size: 1.2rem; }
+
+    /* Navigation bar */
+    nav {
+      width: 100%;
+      background-color: #0b3d91;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #f0a500;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #0b3d91;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      color: #555;
+    }
+
+    /* Projects section */
+    .projects {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .project-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 250px;
+      text-align: center;
+      padding: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .project-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #0b3d91;
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-card a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: #0b3d91;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+
+    .project-card a:hover {
+      background-color: #06295f;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .projects {
+        gap: 1rem;
+      }
+      .project-card {
+        width: 90%;
+      }
+      nav a {
+        margin: 0 1rem;
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Gaganvir Bhullar</h1>
-  <p>Welcome to my portfolio! Projects coming soon.</p>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="https://gaganvirbhullar.github.io/task-manager-frontend/" target="_blank">Task Manager</a>
+    <!-- Add more project links here -->
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Gaganvir Bhullar</h1>
+    <p>Welcome to my portfolio! Explore my projects below.</p>
+  </header>
+
+  <!-- Projects section -->
+  <section class="projects">
+    <div class="project-card">
+      <h2>Task Manager</h2>
+      <p>Full-stack Task Manager built with Node.js, Express, MongoDB, and React.</p>
+      <a href="https://gaganvirbhullar.github.io/task-manager-frontend/" target="_blank">View Project</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Gaganvir Bhullar
+  </footer>
+
 </body>
 </html>
